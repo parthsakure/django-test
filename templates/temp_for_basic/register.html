@@ -1,0 +1,11 @@
+{% extends 'temp_for_basic/design.html' %}
+{% block body_block %}
+<h1>Welcome to register Page!</h1>
+<h2>Please fill out the form</h2>
+<form action="" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    {{ userform.as_p }}
+    {{ modelform.as_p }}
+    <input type="submit" value="Register" class="btn btn-primary">
+</form>
+{% endblock %}
